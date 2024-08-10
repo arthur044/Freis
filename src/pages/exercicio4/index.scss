@@ -1,0 +1,136 @@
+.pagina-e01 {
+  font-family: "Roboto", "Arial";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  .cabecalho {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 80px;
+    background-color: #6278f7;
+
+    .titulo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 80px;
+      }
+      h1 {
+        color: white;
+        margin-left: 10px;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+
+      .link {
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .exercicio {
+    padding: 60px;
+    .titulo {
+      .texto {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        text-decoration: none;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        h2 {
+          margin-left: 10px;
+        }
+      }
+
+      .faixa {
+        background-color: #f75f19;
+        height: 4px;
+      }
+    }
+
+    .descricao {
+      background-color: white;
+      height: 215px;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .formulario {
+      width: auto;
+      transform: translateX(-50%);
+      text-align: end;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .campos {
+        min-width: 45rem;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        // text-align: start;
+        // align-content: center
+        ;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
+
+        .campo {
+          // margin-bottom: 20px;
+          justify-content: space-evenly;
+          display: flex;
+          gap: 5em;
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          label {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .nome {
+            width: 130px;
+          }
+          input {
+            min-width: 80px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border-style: none;
+            border: 2px solid #c3c3c3;
+            font-size: 24px;
+          }
+        }
+
+        .executar {
+          max-width: 100px;
+          text-align: center;
+          text-decoration: none;
+          padding: 10px 20px;
+          background-color: #6278f7;
+          color: white;
+          border-radius: 8px;
+        }
+      }
+
+      .resultado {
+        margin-top: 10px;
+      }
+    }
+  }
+}

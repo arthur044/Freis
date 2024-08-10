@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pagina-sobre {
+  font-family: 'Roboto';
+  .sobre {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    flex-direction: column;
+    & > div {
+      padding: 00px 50px;
+      font-family: Roboto;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 37.5px;
+      text-align: center;
+      img {
+        margin-top: 40px;
+        width: 90px;
+      }
+    }
+  }
+}
