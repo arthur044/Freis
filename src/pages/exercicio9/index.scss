@@ -1,20 +1,12 @@
-.pagina-e03 {
+.pagina-e09 {
   font-family: "Roboto", "Arial";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f5f6fa;
 
   .exercicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 60px;
-
     .titulo {
-      align-self: flex-start;
-      width: 100%;
-
       .texto {
         display: flex;
         align-items: center;
@@ -28,79 +20,80 @@
           margin-left: 10px;
         }
       }
+
       .faixa {
-        background-color: #37fff3;
+        background-color: #3eff37;
         height: 4px;
-        min-width: 680px;
       }
     }
 
     .descricao {
       background-color: white;
-      height: 215px;
+      height: auto;
       border-radius: 12px;
       padding: 20px;
       margin-top: 20px;
-      box-shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
 
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
     .formulario {
       width: auto;
-      // text-align: end;
+      // transform: translateX(-50%);
+      text-align: end;
       margin-top: 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-
       .campos {
-        width: auto;
+        min-width: auto;
         height: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-self: center;
         background-color: white;
         border-radius: 12px;
         box-shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
 
         .campo {
-          width: auto;
-          // justify-content: space-evenly;
           display: flex;
-        
-          gap: 5em;
+          flex-direction: column;
+          display: flex;
+
           & > div {
             display: flex;
             flex-direction: column;
             align-items: center;
           }
           label {
+            align-self: flex-start;
+            justify-self: flex-start;
             font-size: 18px;
             font-weight: bold;
           }
+          .nome {
+            width: 130px;
+          }
           input {
-            width: 80px;
+            min-width: 380px;
             margin-top: 8px;
             border-radius: 8px;
             border-style: none;
             border: 2px solid #c3c3c3;
             font-size: 24px;
+            padding: 4px;
           }
         }
-        .execute {
-          align-self: flex-end;
-        }
+
         .executar {
-          margin-top: 15px;
           max-width: 100px;
+          margin-top: 10px;
           text-align: center;
           text-decoration: none;
-          border: none;
           padding: 10px 20px;
+          border: none;
           background-color: #6278f7;
           color: white;
           border-radius: 8px;

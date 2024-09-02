@@ -5,6 +5,114 @@
   margin: 0px;
   padding: 0px;
 }
+
+  .pagina- {
+    font-family: "Roboto", "Arial";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  
+  .exercicio {
+    padding: 60px;
+    .titulo {
+      .texto {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        text-decoration: none;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        h2 {
+          margin-left: 10px;
+        }
+      }
+  
+      .faixa {
+        background-color: #f75f19;
+        height: 4px;
+      }
+    }
+  
+    .descricao {
+      background-color: white;
+      height: 215px;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .formulario {
+      width: auto;
+      // transform: translateX(-50%);
+      text-align: end;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .campos {
+        min-width: auto;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
+  
+        .campo {
+          display: flex;
+          flex-direction: column;
+          display: flex;
+  
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          label {
+            align-self: flex-start;
+            justify-self: flex-start;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .nome {
+            width: 130px;
+          }
+          input {
+            min-width: 380px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border-style: none;
+            border: 2px solid #c3c3c3;
+            font-size: 24px;
+          }
+        }
+  
+        .executar {
+          max-width: 100px;
+          text-align: center;
+          text-decoration: none;
+          padding: 10px 20px;
+          background-color: #6278f7;
+          color: white;
+          border-radius: 8px;
+        }
+      }
+  
+      .resultado {
+        margin-top: 10px;
+      }
+    }
+  }
+  }
+
 .pagina-freis {
   font-family: "Poppins", "Roboto", "Oswald", "Arial", sans-serif;
   header {
@@ -34,15 +142,17 @@
     list-style: none;
     gap: 20px;
     margin-right: 45px;
-
   }
-  nav ul li, a {
+  nav ul li,
+  a {
     color: white;
     text-decoration: none;
     font-size: 18px;
   }
   .content {
-    & > a, span, h4 {
+    & > a,
+    span,
+    h4 {
       text-decoration: none;
       color: black;
     }
@@ -58,74 +168,13 @@
       display: flex;
       margin-top: 28px;
       gap: 40px;
-      .exercicio-desconto {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 15px;
-        min-width: 150px;
-        padding: 20px 10px;
-        gap: 15px;
-        cursor: pointer;
-        ul li, a {
-          text-decoration: none ;
-
-        }
-        .box-yellow {
-          width: 60px;
-          height: 60px;
-          background-color: #ffce37;
-          border-radius: 15px;
-        }
-      }
-
-      .exercicio-conversor {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        border-radius: 15px;
-        padding: 20px 10px;
-        gap: 15px;
-        min-width: 150px;
-        padding: 20px 10px;
-
-        .cor-verde {
-          width: 60px;
-          height: 60px;
-          background-color: #b3ff37;
-          border-radius: 15px;
-        }
-      }
-      .valorTotal-qtd {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        min-width: 150px;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 10px;
-        text-align: center;
-        border-radius: 15px;
-        .cor-azul {
-          width: 60px;
-          height: 60px;
-          background-color: #37FFF3;
-          border-radius: 15px;
-        }
-      }
       .leitura {
         display: flex;
         flex-direction: column;
         gap: 15px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        min-width: 180px;
+        width: 180px;
+        height: 190px;
         align-items: center;
         justify-content: center;
         padding: 20px 10px;
@@ -137,7 +186,116 @@
           background-color: #f75f19;
           border-radius: 15px;
         }
+        
       }
     }
+  }
+}
+.pagina-exercicios {
+  .pagina-e06 {
+    font-family: "Roboto", "Arial";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  
+  .exercicio {
+    padding: 60px;
+    .titulo {
+      .texto {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        text-decoration: none;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        h2 {
+          margin-left: 10px;
+        }
+      }
+  
+      .faixa {
+        background-color: #f75f19;
+        height: 4px;
+      }
+    }
+  
+    .descricao {
+      background-color: white;
+      height: 215px;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .formulario {
+      width: auto;
+      // transform: translateX(-50%);
+      text-align: end;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .campos {
+        min-width: auto;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: rgba(100, 100, 111, 0.35) 0px 7px 29px 0px;
+  
+        .campo {
+          display: flex;
+          flex-direction: column;
+          display: flex;
+  
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          label {
+            align-self: flex-start;
+            justify-self: flex-start;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .nome {
+            width: 130px;
+          }
+          input {
+            min-width: 380px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border-style: none;
+            border: 2px solid #c3c3c3;
+            font-size: 24px;
+          }
+        }
+  
+        .executar {
+          max-width: 100px;
+          text-align: center;
+          text-decoration: none;
+          padding: 10px 20px;
+          background-color: #6278f7;
+          color: white;
+          border-radius: 8px;
+        }
+      }
+  
+      .resultado {
+        margin-top: 10px;
+      }
+    }
+  }
   }
 }

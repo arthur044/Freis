@@ -1,33 +1,21 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
+import Header from "../../components/header";
 
 export default function Exercicio4() {
-  const [nomeDolivro, setNome] = useState('');
+  const [nomeDolivro, setNome] = useState("");
   const [qtdPaginas, setQtdPaginas] = useState(0);
   const [tempoLeitura, setTempo] = useState(0);
-  
+
   const [res, setRes] = useState(0);
   function calcularValor() {
-    let calcularTempo = (qtdPaginas * tempoLeitura) / 3600
-    setRes(calcularTempo.toFixed(2))
+    let calcularTempo = (qtdPaginas * tempoLeitura) / 3600;
+    setRes(calcularTempo.toFixed(2));
   }
   return (
-    <div className="pagina-e01">
-      <div className="cabecalho">
-        <div className="titulo">
-          <img src="/assets/images/logo.svg" alt="logo" />
-          <h1>React FreiS</h1>
-        </div>
-        <div className="links">
-          <Link to="/" className="link">
-            Inicio
-          </Link>
-          <Link to="/sobre" className="link">
-            Sobre
-          </Link>
-        </div>
-      </div>
+    <div className="pagina-e04 pagina">
+      <Header />
       <div className="exercicio">
         <div className="titulo">
           <div className="texto">
@@ -40,7 +28,9 @@ export default function Exercicio4() {
         </div>
         <div className="descricao">
           <p>
-          Implementar um programa em React que Calcule o tempo que um livro será lido por uma pessoa a partir  do nome do livro, do total de paginas e do tempo em segundos de leitura por pagina.
+            Implementar um programa em React que Calcule o tempo que um livro
+            será lido por uma pessoa a partir do nome do livro, do total de
+            paginas e do tempo em segundos de leitura por pagina.
           </p>
         </div>
         <div className="formulario">
@@ -48,7 +38,8 @@ export default function Exercicio4() {
             <div className="campo">
               <div>
                 <label>Nome do livro</label>
-                <input className="nome"
+                <input
+                  className="nome"
                   placeholder="Nome"
                   onChange={(e) => setNome(e.target.value)}
                 />
@@ -67,11 +58,12 @@ export default function Exercicio4() {
                   onChange={(e) => setTempo(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="execute">
-              <Link href="#" className="executar" onClick={calcularValor}>
+              <div className="execute">
+              <button className="executar" onClick={calcularValor}>
                 Executar
-              </Link>
+              </button>
+            </div>
+           
             </div>
           </div>
           <h3 className="resultado">Resultado: O tempo de leitura é {res}H</h3>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
+import Header from "../../components/header";
 
 export default function Exercicio2() {
   const [valor, setValor] = useState(0);
@@ -9,21 +10,8 @@ export default function Exercicio2() {
       setRes(valor/1000);
   }
   return (
-    <div className="pagina-e01">
-      <div className="cabecalho">
-        <div className="titulo">
-          <img src="/assets/images/logo.svg" alt="logo" />
-          <h1>React FreiS</h1>
-        </div>
-        <div className="links">
-          <Link to="/" className="link">
-            Inicio
-          </Link>
-          <Link to="/sobre" className="link">
-            Sobre
-          </Link>
-        </div>
-      </div>
+    <div className="pagina-e02 ">
+      <Header />
       <div className="exercicio">
         <div className="titulo">
           <div className="texto">

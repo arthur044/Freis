@@ -1,56 +1,76 @@
 import "./index.scss";
-import { Link } from "react-router-dom";
+import Header from "../../components/header";
+import Cards from "../../components/cards";
 function App() {
   return (
     <div className="pagina-freis">
-      <header>
-        <div className="img-frei">
-          <img src="/assets/images/logo.svg" alt="" />
-          <h3>React FreiS</h3>
-        </div>
-        <nav className="nav">
-          <ul>
-            <li>Inicio</li>
-            <li>
-              <Link to="/aboutUs">Sobre</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       <div className="content">
         <p>
           <strong>Escolha um treino...</strong>
         </p>
         <div className="exercicios">
-          <Link to="/exercicio1">
-            <div className="exercicio-desconto">
-              <div className="box-yellow"></div>
-              <h4>Cupom de desconto</h4>
-              <span>Exercicio 1</span>
-            </div>
-          </Link>
-          <Link to="/exercicio2">
-            <div className="exercicio-conversor">
-              <div className="cor-verde"></div>
-              <h4>Converter Kg/gramas</h4>
-              <span>Exercicio 2</span>
-            </div>
-          </Link>
-          <Link to="/exercicio3">
-            <div className="valorTotal-qtd">
-              <div className="cor-azul"></div>
-              <h4>Valor total por quantidade</h4>
-              <span>Exercicio 3</span>
-            </div>
-          </Link>
-          <Link to="/exercicio4">
-            <div className="leitura">
-              <div className="cor-laranja"></div>
-              <h4>Treino de Leitura</h4>
-              <span>Exercicio 4</span>
-            </div>
-          </Link>
+          <Cards
+            link="/exercicio-1"
+            titulo="Cupom de desconto"
+            nome="Exercicio 1"
+            background="#ffce37"
+          />
+
+          <Cards
+            link="/exercicio2"
+            titulo="Converter Kg/gramas"
+            nome="Exercicio 2"
+            background="#b3ff37"
+          />
+          <Cards
+            link="/exercicio3"
+            titulo="Valor total por quantidade"
+            nome="Exercicio 3"
+            background="#37fff3"
+          />
+          <Cards
+            link="/exercicio4"
+            titulo="Treino de Leitura"
+            nome="Exercicio 4"
+            background="#f75f19"
+          />
+          <Cards
+            link="/exercicio5"
+            titulo="Treino média notas"
+            nome="Exercicio 5"
+            background="#cb37ff"
+          />
+          <Cards
+            link="/exercicio6"
+            titulo="Salário líquido"
+            nome="Exercicio 6"
+            background="#f75f19"
+          />
+          <Cards
+            link="/exercicio7"
+            titulo="Cores primarias"
+            nome="Exercicio 7"
+            background="#37FFAB"
+          />
+          <Cards
+            link="/exercicio8"
+            titulo="Temperatura"
+            nome="Exercicio 8"
+            background="#151515"
+          />
+          <Cards
+            link="/exercicio9"
+            titulo="Sorveteria"
+            nome="Exercicio 9"
+            background="#741818"
+          />
+          <Cards
+            link="/exercicio10"
+            titulo="IMC"
+            nome="Exercicio 10"
+            background="#8f0a88"
+          />
         </div>
       </div>
     </div>

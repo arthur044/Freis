@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
+import Header from "../../components/header";
 
 export default function Exercicio3() {
   const [qtdPeq, setqtdPeq] = useState(0);
@@ -13,21 +14,8 @@ export default function Exercicio3() {
     setRes(valorTotal)
   }
   return (
-    <div className="pagina-e01">
-      <div className="cabecalho">
-        <div className="titulo">
-          <img src="/assets/images/logo.svg" alt="logo" />
-          <h1>React FreiS</h1>
-        </div>
-        <div className="links">
-          <Link to="/" className="link">
-            Inicio
-          </Link>
-          <Link to="/sobre" className="link">
-            Sobre
-          </Link>
-        </div>
-      </div>
+    <div className="pagina-e03 pagina">
+      <Header />
       <div className="exercicio">
         <div className="titulo">
           <div className="texto">
@@ -72,9 +60,9 @@ export default function Exercicio3() {
               </div>
             </div>
             <div className="execute">
-              <Link href="#" className="executar" onClick={calcularValor}>
+              <button className="executar" onClick={calcularValor}>
                 Executar
-              </Link>
+              </button>
             </div>
           </div>
           <h3 className="resultado">Resultado: O total é {res} R$</h3>

@@ -1,36 +1,30 @@
-.pagina-e01 {
+.pagina-e02 {
   font-family: "Roboto", "Arial";
+  background-color: #f5f6fa;
 
-  .cabecalho {
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    padding: 0 80px;
-    background-color: #6278f7;
+    // .titulo {
+    //   display: flex;
+    //   align-items: center;
+    //   img {
+    //     height: 80px;
+    //   }
+    //   h1 {
+    //     color: white;
+    //     margin-left: 10px;
+    //   }
+    // }
 
-    .titulo {
-      display: flex;
-      align-items: center;
-      img{
-        height: 80px;
-      }
-      h1 {
-        color: white;
-        margin-left: 10px;
-      }
-    }
+    // .links {
+    //   display: flex;
+    //   align-items: center;
 
-    .links {
-      display: flex;
-      align-items: center;
-
-      .link {
-        margin-left: 10px;
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
+    //   .link {
+    //     margin-left: 10px;
+    //     text-decoration: none;
+    //     color: white;
+    //   }
+    // }
+  
 
   .exercicio {
     padding: 60px;
@@ -51,36 +45,31 @@
       }
 
       .faixa {
-        background-color: 
-        #B3FF37;
+        background-color: #b3ff37;
         height: 4px;
       }
     }
 
     .descricao {
       background-color: white;
-      height: 215px;
+      height: auto;
       border-radius: 12px;
       padding: 20px;
       margin-top: 20px;
-
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .formulario {
-      width: 480px;
-      margin-left: 50%;
-      transform: translateX(-50%);
+      width: auto;
       text-align: end;
       margin-top: 40px;
 
       .campos {
-        height: 280px;
+        display: flex;
+        align-items: flex-end;
         padding: 20px;
-
-        text-align: start;
         align-content: center;
 
         background-color: white;
@@ -89,7 +78,6 @@
 
         .campo {
           margin-bottom: 20px;
-
           label {
             font-size: 18px;
             font-weight: bold;
@@ -120,4 +108,5 @@
       }
     }
   }
+
 }
