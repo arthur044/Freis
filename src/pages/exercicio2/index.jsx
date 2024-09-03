@@ -33,9 +33,9 @@ export default function Exercicio2() {
               <label>Informe o valor em gramas</label>
               <input placeholder="0" onChange={e => setValor(e.target.value)}/>
             </div>
-            <Link href="#" className="executar" onClick={calcularValor}>
+            <button href="#" className="executar" onClick={calcularValor}>
               Executar
-            </Link>
+            </button>
           </div>
           <h3 className="resultado">Resultado: O total é {res} Kg</h3>
         </div>

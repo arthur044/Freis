@@ -62,6 +62,9 @@
     }
 
     .formulario {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: auto;
       text-align: end;
       margin-top: 40px;
@@ -77,6 +80,9 @@
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         .campo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           margin-bottom: 20px;
           label {
             font-size: 18px;
@@ -95,7 +101,7 @@
 
         .executar {
           text-decoration: none;
-          float: right;
+          border: none;
           padding: 10px 20px;
           background-color: #6278f7;
           color: white;

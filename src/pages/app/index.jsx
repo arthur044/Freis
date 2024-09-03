@@ -71,6 +71,12 @@ function App() {
             nome="Exercicio 10"
             background="#8f0a88"
           />
+           <Cards
+            link="/exercicio11"
+            titulo="Tabuada"
+            nome="Exercicio 11"
+            background="#0a5980"
+          />
         </div>
       </div>
     </div>

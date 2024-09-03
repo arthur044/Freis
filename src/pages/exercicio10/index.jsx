@@ -6,37 +6,73 @@ import { withMask } from "use-mask-input";
 import { useState } from "react";
 
 export default function ExerciceTen() {
-  const [altura, setAltura] = useState(0);
-  const [peso, setPeso] = useState(0);
-  const [listaDeResultados, setListaDeResultados] = useState([]);
-  const [resultadoImc, setResultadoImc] = useState({
-    peso: 0,
-    altura: 0,
-    resultado: "",
-  });
+  const [altura, setAltura] = useState('');
+  const [peso, setPeso] = useState('');
+  const [resultadoImc, setResultadoImc] = useState([
+    {
+      peso: 0,
+      altura: 0,
+      resultado: "",
+    },
+  ]);
 
   function calcularImc() {
     let calculo = Number(peso) / (Number(altura) * Number(altura));
-
-    let resultado = "";
-
     if (calculo < 16.9) {
-      resultado = "Muito abaixo do peso";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Muito abaixo do peso" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo >= 17 && calculo < 18.4) {
-      resultado = "Abaixo do peso";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Abaixo do peso" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo >= 18.5 && calculo < 24.9) {
-      resultado = "Peso normal";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Peso normal" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo >= 25 && calculo < 29.9) {
-      resultado = "Acima do peso";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Acima do peso" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo >= 30 && calculo < 34.9) {
-      resultado = "Obesidade Grau I";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Obesidade Grau I" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo >= 35 && calculo <= 40) {
-      resultado = "Obesidade Grau II";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Obesidade Grau II" },
+      ]);
+      setAltura('');
+      setPeso('');
     } else if (calculo > 40) {
-      resultado = "Obesidade Grau III";
+      setResultadoImc([
+        ...resultadoImc,
+        { peso, altura, resultado: "Obesidade Grau III" },
+      ]);
+      setAltura('');
+      setPeso('');
     }
   }
-
+  function removerImc(pos) {
+    resultadoImc.splice(pos, 1);
+    setResultadoImc([...resultadoImc]);
+  }
   return (
     <>
       <Header />
@@ -67,6 +103,7 @@ export default function ExerciceTen() {
               <div className="input-group">
                 <label htmlFor="altura">Altura</label>
                 <input
+                  value={altura}
                   type="text"
                   id="altura"
                   placeholder="1.73"
@@ -78,6 +115,7 @@ export default function ExerciceTen() {
               <div className="input-group">
                 <label htmlFor="peso">Peso</label>
                 <input
+                  value={peso}
                   type="text"
                   id="peso"
                   placeholder="55"
@@ -93,17 +131,15 @@ export default function ExerciceTen() {
           </form>
 
           <div className="results">
-            <div className="resultado-item">
-
-              <p>Altura:  | Peso: 80.5 | Situação: Peso Normal</p>
-              <span>✖</span>
-
-            </div>
-        
-            <div className="resultado-item">
-              <p>Altura: 1.80 | Peso: 80.5 | Situação: Peso Normal</p>
-              <span>✖</span>
-            </div>
+            {resultadoImc.map((item, pos) => (
+              <div key={pos} className="resultado-item">
+                <p>
+                  Altura: {item.altura} | Peso: {item.peso} | Situação:{" "}
+                  {item.resultado}{" "}
+                </p>
+                <span onClick={() => removerImc(pos)}>✖</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
